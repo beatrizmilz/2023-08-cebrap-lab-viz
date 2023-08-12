@@ -1,0 +1,95 @@
+---
+title: "cebrap.lab online  - Visualização de dados no R"
+subtitle: "Introdução ao curso"
+format: 
+  revealjs:
+    incremental: false   
+    logo: "https://cursos.cebrap.org.br/wp-content/uploads/2022/02/logo-nav.png"
+    footer: "Slides por [Beatriz Milz](https://beatrizmilz.com), feitos com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Códigos e materiais disponíveis no [GitHub](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz). Licença de uso: [CC-BY-SA](https://beatrizmilz.com/license/)."
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+editor: visual
+lang: pt
+author: "Beatriz Milz"
+date: 'Agosto de 2023'
+---
+
+## Ministrante
+
+-   [Beatriz Milz](https://beatrizmilz.com/about/)
+
+-   Doutoranda em Ciência Ambiental (PROCAM/IEE/USP) na Universidade de São Paulo.
+
+- Professora de programação em R:
+
+   - [Curso-R](https://curso-r.com/)
+   
+   - [cebrap.lab](https://cebrap.org.br/cebrap-lab/)
+   
+   - [Programa de verão IME-USP](https://www.ime.usp.br/~verao/)
+
+
+-   Co-organizadora da R-Ladies São Paulo, uma comunidade que tem como objetivo promover a diversidade de gênero na comunidade da linguagem R.
+
+-   Instrutora de tidyverse certificada pela RStudio/Posit.
+
+## Informações gerais
+
+-   **Data/horário:** 28 de agosto a 1 de setembro/2023;
+    -   Segunda, Quarta e Sexta: aula ao vivo, online, das 19h00 às 22h00.
+    -   Terça e quinta: haverão tarefas para casa, para praticar os conceitos.
+
+## Pré-requisitos 
+
+
+-   `R` e `RStudio` instalados no seu computador:
+
+-   Links para instalação:
+
+    -   [R](https://cran.r-project.org/bin/windows/base/)
+    -   [RStudio](https://rstudio.com/products/rstudio/download/)
+    
+    
+- Instalar pacotes:
+
+```{r, eval=FALSE, echo = TRUE}
+install.packages(c(
+   "tidyverse",
+   "sf",
+   "geobr"
+))
+```
+
+
+
+## Plano das aulas
+
+-   Temas:
+
+    -  Conceitos importantes
+
+    -  Introdução à criação de gráficos com `ggplot2`
+
+    -  Exportando os gráficos para publicação
+    
+    - Introdução à criação de mapas com `ggplot2`, `sf` e `geobr`
+    
+
+
+## Quais dados vamos usar?
+
+Dados disponibilizados no pacote [abjData](https://abjur.github.io/abjData/).
+
+-   `pnud_min`: Um conjunto de dados, que contém informações disponibilizadas pelo Programa das Nações Unidas para o Desenvolvimento (PNUD). Os indicadores foram extraídos dos Censos Demográficos de 1991, 2000 e 2010. As informações estão organizadas a nível de municípios. Fonte: [Site do PNUD](https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html).
+
+## Quais dados vamos usar?
+
+```{r}
+library(tidyverse)
+dados_pnud <- read_csv2("../dados/base_pnud_min.csv")
+glimpse(dados_pnud)
+```
+
+## Vamos começar? {.middle .center}
