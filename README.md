@@ -25,7 +25,10 @@ Para saber de próximos oferecimentos, entre em contato com
 - [Slide de apresentação do
   curso](https://beatrizmilz.github.io/2023-08-cebrap-lab-viz/slides/introducao-ao-curso.html#/)
 
-### Scripts
+- [Introdução aos
+  mapas](https://beatrizmilz.github.io/2023-08-cebrap-lab-viz/slides/mapas-com-r.html#/)
+
+### Scripts pós aula
 
 Em breve.
 
@@ -34,6 +37,9 @@ Em breve.
 Em breve.
 
 ## Materiais para revisão do conteúdo básico
+
+- [Material do curso de Introdução ao R - 2023 (ministrado por Beatriz
+  Milz)](https://beatrizmilz.github.io/2023-06-cebrap-lab-intro-R/)
 
 - [Livro online, gratuito e em inglês: R for Data
   Science](https://r4ds.hadley.nz/)
@@ -50,12 +56,7 @@ Em breve.
 - [Slide Curso-R: Manipulação de
   dados](https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html#1)
 
-## Materiais para revisão do conteúdo sobre gráficos
+## Materiais para ir além
 
-- [Slide Curso-R: Visualizando dados com o pacote
-  ggplot2](https://curso-r.github.io/main-r4ds-1/slides/05-ggplot2.html#1)
-
-## Outras informações
-
-Material do curso de Introdução ao R - 2023 (ministrado por Beatriz
-Milz): <https://github.com/beatrizmilz/cebrap-lab-intro-R-5-2022>
+- [Data Visualization with R - Andrew
+  Heiss](https://datavizf23.classes.andrewheiss.com/syllabus.html)
