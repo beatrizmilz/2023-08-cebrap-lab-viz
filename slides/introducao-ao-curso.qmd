@@ -56,9 +56,9 @@ date: 'Agosto de 2023'
 
 ```{r, eval=FALSE, echo = TRUE}
 install.packages(c(
-   "tidyverse",
-   "sf",
-   "geobr"
+  "tidyverse",
+  "sf",
+  "geobr"
 ))
 ```
 
@@ -167,7 +167,7 @@ ggplot2::ggplot(cars) +
   ggplot2::aes(speed, dist) +
   ggplot2::geom_point(colour = "darkblue") +
   ggplot2::stat_smooth(
-    se = FALSE, colour = "lightgray", method="loess",
+    se = FALSE, colour = "lightgray", method = "loess",
     formula = "y~x"
   ) +
   ggplot2::theme_minimal(14) +

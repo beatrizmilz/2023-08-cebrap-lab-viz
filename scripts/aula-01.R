@@ -199,9 +199,9 @@ media_idhm_por_regiao |>
   ggplot() +
   aes(x = media_idhm, y = uf_sigla) +
   geom_col(aes(fill = regiao_nm)) +
-  facet_wrap(~ regiao_nm,  scales = "free_y")
+  facet_wrap(~regiao_nm, scales = "free_y")
 
-  # veremos mais exemplos de facet ao longo das aulas!
+# veremos mais exemplos de facet ao longo das aulas!
 
 # Gráfico de linhas (geom_line) -------------------------------------------------
 

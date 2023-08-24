@@ -96,7 +96,7 @@ exemplo_grafico +
 
 
 exemplo_grafico +
-labs(
+  labs(
     x = "IDHM médio",
     y = "UF",
     title = "IDHM médio por UF",
@@ -104,59 +104,59 @@ labs(
     caption = "Fonte: PNUD, dados disponíveis no pacote abjData.",
     fill = "Região"
   ) +
-theme(
-  axis.title.x = element_text(
-    color = "red",
-    size = 20,
-    face = "bold"
-  ),
-  axis.title.y = element_text(
-    color = "blue",
-    size = 20,
-    face = "italic"
-  ),
-  axis.text.x = element_text(
-    color = "green",
-    size = 15,
-    face = "bold"
-  ),
-  axis.text.y = element_text(
-    color = "orange",
-    size = 15,
-    face = "italic"
-  ),
-  plot.title = element_text(
-    color = "purple",
-    size = 30,
-    face = "bold"
-  ),
-  plot.subtitle = element_text(
-    color = "black",
-    size = 20,
-    face = "italic"
-  ),
-  plot.caption = element_text(
-    color = "gray",
-    size = 10,
-    face = "bold"
-  ),
-  legend.title = element_text(
-    color = "brown",
-    size = 20,
-    face = "italic"
-  ),
-  legend.text = element_text(
-    color = "pink",
-    size = 15,
-    face = "bold"
-  ),
-  plot.background = element_rect(
-    fill = "pink"
-  ),
-  panel.background = element_rect(
-    fill = "lightblue"
+  theme(
+    axis.title.x = element_text(
+      color = "red",
+      size = 20,
+      face = "bold"
+    ),
+    axis.title.y = element_text(
+      color = "blue",
+      size = 20,
+      face = "italic"
+    ),
+    axis.text.x = element_text(
+      color = "green",
+      size = 15,
+      face = "bold"
+    ),
+    axis.text.y = element_text(
+      color = "orange",
+      size = 15,
+      face = "italic"
+    ),
+    plot.title = element_text(
+      color = "purple",
+      size = 30,
+      face = "bold"
+    ),
+    plot.subtitle = element_text(
+      color = "black",
+      size = 20,
+      face = "italic"
+    ),
+    plot.caption = element_text(
+      color = "gray",
+      size = 10,
+      face = "bold"
+    ),
+    legend.title = element_text(
+      color = "brown",
+      size = 20,
+      face = "italic"
+    ),
+    legend.text = element_text(
+      color = "pink",
+      size = 15,
+      face = "bold"
+    ),
+    plot.background = element_rect(
+      fill = "pink"
+    ),
+    panel.background = element_rect(
+      fill = "lightblue"
+    )
   )
-)
 
 # Escalas ----------------
 
@@ -242,7 +242,7 @@ exemplo_grafico_3 <- media_idhm_por_uf |>
     y = "UF",
     title = "IDHM médio por UF",
     subtitle = "Ano de 2010",
-    #caption = "Fonte: PNUD, dados disponíveis no pacote abjData.",
+    # caption = "Fonte: PNUD, dados disponíveis no pacote abjData.",
     fill = "IDHM médio"
   ) +
   theme(
@@ -267,7 +267,8 @@ exemplo_grafico_4 <- dados_pnud_2010 |>
   group_by(regiao_nm, uf_sigla) |>
   summarise(soma_pop = sum(pop)) |>
   mutate(
-  soma_pop_milhoes = soma_pop/1000000) |>
+    soma_pop_milhoes = soma_pop / 1000000
+  ) |>
   ggplot() +
   aes(x = soma_pop_milhoes, y = uf_sigla) +
   geom_col(aes(fill = soma_pop_milhoes)) +
@@ -299,4 +300,5 @@ ggsave(
   width = 10,
   height = 6,
   units = "in",
-  dpi = 300)
+  dpi = 300
+)

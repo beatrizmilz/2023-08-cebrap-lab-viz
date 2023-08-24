@@ -50,14 +50,17 @@ library(readxl)
 library(janitor)
 
 barragens <- read_xlsx("dados/sigbm_download_2022-05-05.xlsx", skip = 4) |>
-# limpar os nomes das colunas
+  # limpar os nomes das colunas
   clean_names() |>
   mutate(
     # transformar a coluna volume_atual_m3 em número
     # por padrão ela está como texto.
     volume_m3 = parse_number(volume_atual_m3,
-    locale = locale(decimal_mark = ",",
-                  grouping_mark = ".")),
+      locale = locale(
+        decimal_mark = ",",
+        grouping_mark = "."
+      )
+    ),
   )
 
 glimpse(barragens)
@@ -100,6 +103,3 @@ glimpse(barragens)
 # Deixe os pontos com transparência de 50%.
 # Bonus: transforme o eixo y em escala logarítmica, usando a função
 #  `scale_y_log10()` no ggplot.
-
-
-
