@@ -16,3 +16,9 @@
 # Aula 3:
 # - como criar mapas simples usando a teoria de gráficos em R
 # - boas práticas ao criar visualizações de dados
+
+
+
+# Pacotes para instalar
+
+install.packages(c("tidyverse", "patchwork", "ggthemes"))
