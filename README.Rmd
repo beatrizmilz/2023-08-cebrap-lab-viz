@@ -20,8 +20,8 @@ Para saber de próximos oferecimentos, entre em contato com <cebrap.lab@cebrap.o
 
 - **Ministrante:** [Beatriz Milz](https://beatrizmilz.com/about/)
 
-- **Data/horário:** 28 de agosto a 1 de setembro/2023;  
-  - Segunda, Quarta e Sexta: aula ao vivo, online, das 19h00 às 22h00. 
+- **Data/horário:** 28 de agosto a 1 de setembro/2023;
+  - Segunda, Quarta e Sexta: aula ao vivo, online, das 19h00 às 22h00.
   - Terça e quinta: haverão tarefas para casa, para praticar os conceitos.
 
 - **Inscrições:** <https://cursos.cebrap.org.br/>
@@ -33,8 +33,10 @@ Para saber de próximos oferecimentos, entre em contato com <cebrap.lab@cebrap.o
 
 - [Slide de apresentação do curso](https://beatrizmilz.github.io/2023-08-cebrap-lab-viz/slides/introducao-ao-curso.html#/)
 
+- [Introdução aos mapas](https://beatrizmilz.github.io/2023-08-cebrap-lab-viz/slides/mapas-com-r.html#/)
 
-### Scripts
+
+### Scripts pós aula
 
 Em breve.
 
@@ -48,17 +50,17 @@ Em breve.
 
 - [Livro online e gratuito: Ciência de Dados em R](https://livro.curso-r.com/7-2-dplyr.html)
 
-- [Slide Curso-R: Introdução ao R](https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html#1) 
+- [Slide Curso-R: Introdução ao R](https://curso-r.github.io/main-r4ds-1/slides/02-introducao-ao-r.html#1)
 
 
-- [Slide Curso-R: Importação de dados](https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html#1) 
+- [Slide Curso-R: Importação de dados](https://curso-r.github.io/main-r4ds-1/slides/03-importacao.html#1)
 
-- [Slide Curso-R: Manipulação de dados](https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html#1) 
+- [Slide Curso-R: Manipulação de dados](https://curso-r.github.io/main-r4ds-1/slides/04-manipulacao.html#1)
 
 
 ## Materiais para revisão do conteúdo sobre gráficos
 
-- [Slide Curso-R: Visualizando dados com o pacote ggplot2](https://curso-r.github.io/main-r4ds-1/slides/05-ggplot2.html#1) 
+- [Slide Curso-R: Visualizando dados com o pacote ggplot2](https://curso-r.github.io/main-r4ds-1/slides/05-ggplot2.html#1)
 
 
 

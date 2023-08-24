@@ -94,8 +94,8 @@ mapa_estados
 ```{r}
 ggplot() +
   geom_sf(data = estados, fill = "white") +
-    geom_sf(data = escolas, color = "gray", alpha = 0.8) +
-    geom_sf(data = rodovias, color = "brown") +
+  geom_sf(data = escolas, color = "gray", alpha = 0.8) +
+  geom_sf(data = rodovias, color = "brown") +
   theme_void()
 ```
 

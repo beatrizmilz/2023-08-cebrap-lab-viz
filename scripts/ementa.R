@@ -22,9 +22,10 @@
 # Pacotes para instalar
 
 install.packages(c(
- "tidyverse",
- "patchwork",
- "ggthemes",
- "sf",
- "geobr"
- ))
+  "tidyverse",
+  "patchwork",
+  "ggthemes",
+  "sf",
+  "geobr",
+  "abjData"
+))
