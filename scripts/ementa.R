@@ -21,4 +21,10 @@
 
 # Pacotes para instalar
 
-install.packages(c("tidyverse", "patchwork", "ggthemes"))
+install.packages(c(
+ "tidyverse",
+ "patchwork",
+ "ggthemes",
+ "sf",
+ "geobr"
+ ))
