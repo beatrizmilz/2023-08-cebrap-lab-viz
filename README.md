@@ -30,11 +30,12 @@ Para saber de próximos oferecimentos, entre em contato com
 
 ### Scripts pós aula
 
-Em breve.
+- [Aula
+  1](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/scripts-pos-aula/aula-01.R)
 
 ### Exercícios
 
-Em breve.
+- [Terça-feira](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/exercicios/exercicio-01.R)
 
 ## Materiais para revisão do conteúdo básico
 
