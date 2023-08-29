@@ -18,6 +18,7 @@ library(tidyverse)
 # Importar os dados que iremos usar
 dados_pnud <- read_csv2("dados/base_pnud_min.csv")
 
+
 # ver as colunas
 glimpse(dados_pnud)
 # Rows: 16,686
@@ -38,9 +39,10 @@ glimpse(dados_pnud)
 # $ lat       <dbl> -11.929, -9.913, -13.492, -11.438, -13.189, -13.117…
 # $ lon       <dbl> -61.996, -63.041, -60.545, -61.448, -60.812, -60.54…
 
-dados_pnud_2010 <- dados_pnud |>
+dados_pnud_2010 <- dados_pnud |> # pipe 
   filter(ano == 2010)
 
+# rm(dados_pnud) # remove o objeto do ambiente
 
 # Importar o dicionário de dados
 dicionario_pnud <- read_csv2("dados/dicionario_base_pnud_min.csv")
@@ -60,7 +62,8 @@ dados_pnud_2010 |>
 
 
 
-# A função aes() define o mapeamento estético (aesthetics mapping) entre as colunas
+# A função aes() define o mapeamento estético (aesthetics mapping) 
+# entre as colunas
 # da base de dados (variáveis) e os elementos visuais do gráfico
 # (eixo, posição, cor, tamanho, etc)
 
@@ -82,6 +85,8 @@ dados_pnud_2010 |>
   geom_point()
 
 
+
+
 # A função geom_smooth() adiciona uma linha de tendência ao gráfico
 # neste exemplo, usamos o método de regressão linear (lm) - linear model
 dados_pnud_2010 |>
@@ -90,6 +95,18 @@ dados_pnud_2010 |>
   geom_point() +
   geom_smooth(method = "lm", se = FALSE)
 
+
+dados_pnud_2010 |> 
+  ggplot() + 
+  aes(x = idhm, y = espvida) +
+  geom_smooth(method = "lm") +
+  geom_point()
+
+
+# Dúvida Samantha - funções com apenas os parênteses
+
+Sys.Date()
+round(1.4345345)
 
 # A partir deste exemplo, o que podemos listar de pontos importantes sobre o ggplot2?
 
@@ -112,7 +129,7 @@ dados_pnud_2010 |>
 
 # 8. A função geom_smooth() adiciona uma linha de tendência ao gráfico
 
-# 9. Podemos usar mais do que uma geometria no mesmo gráfico
+# 9. Podemos usar mais do que uma geometria no mesmo gráfico, e a ordem importa!
 
 # AES --------------------------------------------------------------------------
 # Explorando outros atributos estéticos!
@@ -123,8 +140,8 @@ dados_pnud_2010 |>
 
 dados_pnud_2010 |>
   ggplot() +
-  aes(x = idhm, y = espvida, color = regiao_nm) +
-  geom_point()
+  aes(x = idhm, y = espvida) +
+  geom_point(aes(color = regiao_nm))
 
 # Atributo estético: tamanho (size)
 
@@ -132,8 +149,8 @@ dados_pnud_2010 |>
 
 dados_pnud_2010 |>
   ggplot() +
-  aes(x = idhm, y = espvida, size = pop) +
-  geom_point()
+  aes(x = idhm, y = espvida) +
+  geom_point(aes(size = pop))
 
 # Atributo estético: forma (shape)
 
@@ -141,8 +158,8 @@ dados_pnud_2010 |>
 
 dados_pnud_2010 |>
   ggplot() +
-  aes(x = idhm, y = espvida, shape = regiao_nm) +
-  geom_point()
+  aes(x = idhm, y = espvida) +
+  geom_point(aes(shape = regiao_nm))
 
 # Atributo estético: transparência (alpha)
 
@@ -152,6 +169,18 @@ dados_pnud_2010 |>
   ggplot() +
   aes(x = idhm, y = espvida) +
   geom_point(alpha = 0.5)
+
+# Juntar alguns outros aes
+
+dados_pnud_2010 |> 
+  ggplot() + 
+  aes(x = idhm, y = espvida) +
+  geom_point(aes(color = regiao_nm), alpha = 0.5) +
+  scale_x_continuous(limits = c(0, 1)) + 
+  facet_wrap(~regiao_nm)
+
+
+
 
 # Atributo estético: preenchimento (fill)
 # No tipo de gráfico que estamos explorando (geom_point), não faz sentido usar preenchimento
@@ -199,7 +228,8 @@ media_idhm_por_regiao |>
   ggplot() +
   aes(x = media_idhm, y = uf_sigla) +
   geom_col(aes(fill = regiao_nm)) +
-  facet_wrap(~regiao_nm, scales = "free_y")
+  # facet_wrap(~regiao_nm, scales = "free_y") + 
+  scale_x_continuous(limits = c(0, 1))
 
 # veremos mais exemplos de facet ao longo das aulas!
 
@@ -220,7 +250,10 @@ dados_idhm_ano_regiao <- dados_pnud |>
 dados_idhm_ano_regiao |>
   ggplot() +
   aes(x = ano, y = media_idhm) +
-  geom_line(aes(color = regiao_nm))
+  geom_line(aes(color = regiao_nm)) +
+  geom_point(aes(color = regiao_nm)) +
+  scale_x_continuous(breaks = c(1991, 2000, 2010)) +
+  scale_y_continuous(limits = c(0, 1))
 
 # Usando o aes() linetype, podemos mudar o tipo de linha
 
@@ -228,6 +261,12 @@ dados_idhm_ano_regiao |>
   ggplot() +
   aes(x = ano, y = media_idhm) +
   geom_line(aes(color = regiao_nm), linetype = "dashed")
+
+dados_idhm_ano_regiao |> 
+  ggplot() +
+  aes(x = ano, y = media_idhm) +
+  geom_line(aes(color = regiao_nm, linetype = regiao_nm))
+  
 
 # PAUSA PARA REVISÃO DE CONCEITO!
 # Pq o linetype ficou fora do aes()?
@@ -252,7 +291,7 @@ dados_idhm_ano_regiao |>
 dados_pnud_2010 |>
   ggplot() +
   aes(x = idhm) +
-  geom_histogram()
+  geom_histogram(binwidth = 0.01)
 
 # Podemos mudar o número de bins (caixas) do histograma
 dados_pnud_2010 |>
@@ -264,7 +303,7 @@ dados_pnud_2010 |>
 dados_pnud_2010 |>
   ggplot() +
   aes(x = idhm) +
-  geom_histogram(bins = 10, fill = "lightblue")
+  geom_histogram(bins = 10, fill = "#000000")
 
 # Podemos mudar a cor das bordas das caixas do histograma
 dados_pnud_2010 |>
@@ -278,6 +317,15 @@ dados_pnud_2010 |>
   ggplot() +
   aes(x = idhm) +
   geom_density(fill = "lightblue", color = "black")
+
+
+dados_pnud_2010 |> 
+  ggplot() + 
+  aes(x = rdpc) +
+  geom_density()
+
+
+
 
 # Gráfico de boxplot (geom_boxplot) -------------------------------------------------
 
@@ -304,3 +352,17 @@ dados_pnud_2010 |>
   ggplot() +
   aes(x = regiao_nm, y = espvida) +
   geom_boxplot(fill = "lightblue", color = "black")
+
+
+dados_pnud_2010 |> 
+  ggplot() +
+  aes(x = regiao_nm, y = espvida) +
+  geom_violin()
+
+
+dados_pnud_2010 |> 
+  ggplot() +
+  aes(x = regiao_nm, y = espvida) +
+  geom_boxplot(fill = "lightblue", color = "black", alpha = 0.5 ) +
+  geom_jitter(alpha = 0.1)
+
