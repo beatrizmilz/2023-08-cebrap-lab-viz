@@ -43,6 +43,8 @@ Para saber de próximos oferecimentos, entre em contato com
 
 - [Terça-feira](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/exercicios/exercicio-01.R)
 
+- [Quinta-feira](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/exercicios/exercicio-02.R)
+
 - [Terça-feira - RESOLVIDO EM
   AULA](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/exercicios/exercicio-01-resolvido.R)
 
