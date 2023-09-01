@@ -299,6 +299,21 @@ ggplot() +
 
 
 
-# Praticar com os dados do abjData :)
+# Praticar com os dados do abjData :) ---
 # Turma sugerir algum mapa para fazer com os dados do abjData
 # que já estamos usando no curso!
+
+# Carregar pacote tidyverse
+library(tidyverse)
+
+# IMPORTAÇÃO 
+dados_pnud <- read_csv2("dados/base_pnud_min.csv")
+
+dados_pnud_2010 <- dados_pnud |>
+  filter(ano == 2010) 
+
+
+dados_pnud_2010 |> 
+  sf::st_as_sf(coords = c( "lon", "lat")) |> 
+  ggplot() +
+  geom_sf()
