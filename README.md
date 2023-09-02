@@ -39,6 +39,12 @@ Para saber de próximos oferecimentos, entre em contato com
 - [Dúvida - Linha do
   tempo](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/scripts-pos-aula/duvida-linha-do-tempo.R)
 
+- [Aula
+  3](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/scripts-pos-aula/aula-03.R)
+
+- [Aula 3 -
+  Esquisse](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/scripts-pos-aula/esquisse.R)
+
 ### Exercícios
 
 - [Terça-feira](https://github.com/beatrizmilz/2023-08-cebrap-lab-viz/blob/main/exercicios/exercicio-01.R)
